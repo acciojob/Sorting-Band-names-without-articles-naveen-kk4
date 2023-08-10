@@ -53,9 +53,15 @@ function quickSort(s, e, arr) {
 }
 quickSort(0, touristSpots.length-1, touristSpots);
 
-for(let i in touristSpots){
+ for(let i in touristSpots){
   touristSpots[i]=arr[touristSpots[i]];
 }
+let list = document.getElementById("band");
+        for(let i in touristSpots){
+	         let li = document.createElement('li');
+            li.innerText = touristSpots[i];
+            list.appendChild(li);
+		}
 
 
 
